@@ -1,0 +1,73 @@
+.result{
+	width:100%;
+    margin:0 auto;/*设置整个容器在浏览器中水平居中*/
+}
+
+.left{
+    height:40px;
+    width:30%;
+    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+}
+
+.center{
+    height:40px;
+    width:30%;
+    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+}
+
+.right{
+    height:40px;
+    width:30%;
+    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+}
+
+.li-back{
+	width:100%;
+	background-color:rgba(218, 234, 205, 1);
+	float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+}
+
+.content{
+	padding-top:20px;
+    padding-bottom:10px;
+}
+
+.button{
+	width: 152px;
+	line-height: 47px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	text-shadow:1px 1px 1px #333;
+	border-radius: 5px;
+	margin:0 20px 20px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.button.black{
+	border:1px solid #333;
+	box-shadow: 0 1px 2px #8b8b8b inset,0 -1px 0 #3d3d3d inset,0 -2px 3px #8b8b8b inset;
+	background: -webkit-linear-gradient(top,#656565,#4c4c4c);
+	background: -moz-linear-gradient(top,#656565,#4a4a4a);
+	background: linear-gradient(top,#656565,#4a4a4a);
+}
+
+.query_word{
+	font-size:14px;
+	font-family:"黑体";
+}
+
+.query_body{
+	text-align: end;
+}
+
+input {
+    background:#fff;
+    border: 1px solid #000;
+    padding:20px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+}
+

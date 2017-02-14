@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Uploadify Implementation</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<!-- Load JsRender latest version, from www.jsviews.com: -->
+	<script src="//www.jsviews.com/download/jsrender.js"></script>
+	<script src="/static/js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+	<div class="query_body">
+		<input type = "hidden" id = "wordId" value = "${word}"/>
+		<input type = "text" id="word" value = "${word}"/>
+		<button id="query" class="button black"><span class="query_word">查询歌曲</span></button>
+	</div>	
+
+<!-- Provide container for rendered template output: -->
+  <div id="result"></div>
+
+<!-- Declare a JsRender template, in a script block: -->
+  <script id="myTmpl" type="text/x-jsrender">
+		{{for musics}}
+			<div class="main {{if #index %2 === 0 }}li-back{{else}}li-line{{/if}}">
+				<div class = "left content"><span data-id = "{{:songid}}" class = "song_class">{{:songname}}</span></div>
+				<div class = "center content"><span>{{:artistname}}</span></div>
+				<div class = "right content">
+					<a download="filename" href="{{:downUrl}}" class="download"><img src="/static/image/index/download.png"/></a>
+				</div>
+			</div>
+		{{/for}}
+	</script>
+</body>
+<script type="text/javascript">
+var tmpl = $.templates("#myTmpl"); // Get compiled template
+</script>
+</html>
